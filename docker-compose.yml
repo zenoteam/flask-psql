@@ -5,13 +5,12 @@ services:
     volumes:
       - "dbdata:/var/lib/postgresql/data"
     env_file:
-      - env_file
+      - env_file.env
     networks:
       - db_nw
   flaskapp:
     build: .
-    env_file:
-      - env_file
+    env_file: env_file.env
     volumes:
       - .:/opt/services/flaskapp/src
     networks:
