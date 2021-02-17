@@ -1,0 +1,21 @@
+<div class="user-profile">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Zeno Nigeria</h1>
+      <p>Thanks For Signing Up</p>
+    </div>
+    <h3>Sign Ups</h3>
+    <div class="row">
+      {% for signup in signups %}
+      <div class="col-xs-6 col-md-3">
+        <tr>
+          <h3>{{ signup['name'] }}</h3>
+          <h4 class="body">{{ signup['email'] }}</h4>
+          <hr />
+        </tr>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- /container -->
+</div>
